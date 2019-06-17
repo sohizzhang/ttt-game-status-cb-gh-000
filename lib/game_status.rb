@@ -35,7 +35,7 @@ end
 
 def full?(board)
   for element in board do
-    if element == "X" || element == "O"
+    if (element == "X") || (element == "O")
       true
     else
       false
