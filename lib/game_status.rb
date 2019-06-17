@@ -34,8 +34,8 @@ def won?(board)
 end
 
 def full?(board)
-  board.each do |value|
-    if value == "X" || value == "O"
+  for element in board do
+    if element == "X" || element == "O"
       true
     else
       false
