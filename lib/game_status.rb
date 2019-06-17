@@ -15,24 +15,44 @@ WIN_COMBINATIONS = [
   [2,5,8],
 ]
 
+# def won?(board)
+#   for numbers in WIN_COMBINATIONS do
+#     win_index_1 = numbers[0]
+#     win_index_2 = numbers[1]
+#     win_index_3 = numbers[2]
+#
+#     position_1 = board[win_index_1]
+#     position_2 = board[win_index_2]
+#     position_3 = board[win_index_3]
+#   end
+#
+#   if position_1 == "X" && position_2 == "X" && position_3 == "X"
+#     puts numbers
+#   elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
+#     puts numbers
+#   end
+#   puts false
+# end
+
 def won?(board)
-  for numbers in WIN_COMBINATIONS do
-    win_index_1 = numbers[0]
-    win_index_2 = numbers[1]
-    win_index_3 = numbers[2]
+  WIN_COMBINATIONS.each {|win_combo|
+    index_0 = win_combo[0]
+    index_1 = win_combo[1]
+    index_2 = win_combo[2]
 
-    position_1 = board[win_index_1]
-    position_2 = board[win_index_2]
-    position_3 = board[win_index_3]
-  end
+    position_1 = board[index_0]
+    position_2 = board[index_1]
+    position_3 = board[index_2]
 
-  if position_1 == "X" && position_2 == "X" && position_3 == "X"
-    puts numbers
-  elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
-    puts numbers
-  end
-  puts false
+    if position_1 == "X" && position_2 == "X" && position_3 == "X"
+      return win_combo
+    elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
+      return win_combo
+    end
+  }
+  return false
 end
+
 
 def full?(board)
   if board.include?(" ") || board.include?("")
