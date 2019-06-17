@@ -36,12 +36,10 @@ def won?(board)
 end
 
 def full?(board)
-  for element in board do
-    if (element == "X") || (element == "O")
-      true
-    else
-      false
-    end
+  if board.include?(" ") || board.include?("")
+    false
+  else
+    true
   end
 end
 
