@@ -26,10 +26,12 @@ def won?(board)
     position_3 = board[win_index_3]
   end
 
-  if position_1 == "X" && position_2 == "X" && position_3 == "X"
+  if position_1 == position_2 && position_2 == position_3 && position_taken?(board, index)
     puts numbers
-  elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
-    puts numbers
+  # if position_1 == "X" && position_2 == "X" && position_3 == "X"
+  #   puts numbers
+  # elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
+  #   puts numbers
   else
     false
   end
