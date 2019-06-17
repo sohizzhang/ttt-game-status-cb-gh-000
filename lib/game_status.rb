@@ -27,9 +27,9 @@ def won?(board)
   end
 
   if position_1 == "X" && position_2 == "X" && position_3 == "X"
-    puts numbers
+    puts WIN_COMBINATIONS(numbers)
   elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
-    puts numbers
+    puts WIN_COMBINATIONS(numbers)
   else
     false
   end
