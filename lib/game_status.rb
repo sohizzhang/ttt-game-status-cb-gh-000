@@ -29,9 +29,9 @@ def won?(board)
     #   puts numbers
     # elsif position_1 == "O" && position_2 == "O" && position_3 == "O"
     #   puts numbers
-    else
-      false
-    end
+    # else
+    #   false
+    # end
   end
 end
 
