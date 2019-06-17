@@ -28,7 +28,7 @@ def won?(board)
     if position_1 != " " && position_2 != " " && position_3 != " "
       puts numbers
     else
-      false 
+      false
     end
   end
 end
